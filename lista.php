@@ -1,8 +1,8 @@
 <?php
-    // error_reporting(0);
+    error_reporting(0);
     require_once "conexion.php";
 
-    $res = mysqli_query($conn, "SELECT * FROM autores");
+    $res = mysqli_query($conn, "SELECT * FROM autores ORDER BY apellido");
 ?>
 
 
@@ -26,22 +26,14 @@
             <th>Autores</th>
         </tr>";
         while ($row = $res->fetch_assoc()){
-            echo '<tr><td>' . $row['nombre'].'('.$row['apellido'].')'.' </td></tr>';
+            echo '<tr><td>' . $row['apellido'].'('.$row['nombre'].')'.' </td></tr>';
         }
         
         }
     ?>
         
-        <?php
         
         
-        if ($res->num_rows > 0){
-            while ($row = $res->fetch_assoc()){
-                echo '<tr><td>' . $row['apellido'].'('.$row['nombre'].')'.' </td></tr>';
-            }
-        }
-        
-        ?>
 
     </table>
     <p><a href="introducir.php">Introducir un nuevo autor</a></p>
