@@ -28,25 +28,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            text-align: center;
-        }
-        form{
-            border: 1px solid black;
-            margin: 0;
-            margin : auto;
-            display: inline-block;
-            padding: 10px;
-        }
-        .container{
-            display: inline-block;
-            margin: 10px 0px;
-        }
-        .container div{
-            padding: 5px 0px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
         
